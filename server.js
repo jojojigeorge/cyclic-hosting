@@ -1,6 +1,6 @@
 import express from "express"
 import colors from "colors"
-import dotenv from "dotenv"
+// import dotenv from "dotenv"
 import morgan from "morgan"
 import connectDB from "./config/db.js"
 import authRoutes from "./routes/authRoute.js"
@@ -19,7 +19,7 @@ const __dirname = dirname(__filename);
 const app=express()
 
 // config dotenv
-dotenv.config()
+// dotenv.config()
 
 // middleware
 app.use(express.json())

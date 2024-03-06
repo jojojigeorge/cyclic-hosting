@@ -25,7 +25,7 @@ const app=express()
 app.use(express.json())
 app.use(morgan('dev'))
 app.use(cors())
-app.use(express.static(path.join(__dirname,'./Client/build')))
+app.use(express.static(path.join(__dirname,'./Client/dist')))
 
 // routes
 app.use('/api/v1/auth',authRoutes)
@@ -40,7 +40,7 @@ app.use('/api/v1/product',productRouter)
 
 // rest api
 app.use('*',function(req,res){
-    res.sendFile(path.join(__dirname,"./Client/build/index.html"))
+    res.sendFile(path.join(__dirname,"./Client/dist/index.html"))
 })
 
 // port
